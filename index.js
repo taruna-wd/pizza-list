@@ -41,10 +41,10 @@ app.get("/listings/new",  (req,res)=>{
 
 
 // show route
-app.get(" /listings/:id" ,  async(req,res) =>{
+app.get("/listings/:id" ,  async(req,res) =>{
   let {id} = req.params;
      const listing = await listing.findById(id);
-     res.render("./listings/show.ejs" , {listing})
+     res.render("listings/show.ejs" , {listing})
     })
 
 
